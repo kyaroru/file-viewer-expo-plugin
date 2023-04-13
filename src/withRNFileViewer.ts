@@ -1,6 +1,3 @@
-
- 
-
 import { ConfigPlugin } from "@expo/config-plugins";
 import withRNFileViewerAndroid from "./withRNFileViewerAndroid";
 import withRNFileViewerIos from "./withRNFileViewerIos";

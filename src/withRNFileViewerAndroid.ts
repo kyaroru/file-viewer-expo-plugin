@@ -1,7 +1,12 @@
-import { ConfigPlugin, ExportedConfigWithProps, withAndroidManifest } from "@expo/config-plugins";
+import {
+  ConfigPlugin,
+  ExportedConfigWithProps,
+  withAndroidManifest,
+} from "@expo/config-plugins";
+import { ExpoConfig } from "@expo/config-types";
 
-const withQueryIntent: ConfigPlugin = (config) => {
-return withAndroidManifest(
+const withQueryIntent: ConfigPlugin = (config: ExpoConfig) => {
+  return withAndroidManifest(
     config,
     async (newConfig: ExportedConfigWithProps<any>) => {
       const contents = newConfig.modResults;
@@ -17,64 +22,14 @@ return withAndroidManifest(
             data: [
               {
                 $: {
-                  "android:mimeType": "image/*",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "application/pdf",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "application/zip",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "text/plain",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "text/csv",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "application/msword",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "application/vnd.ms-powerpoint",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "application/vnd.ms-excel",
-                },
-              },
-              {
-                $: {
-                  "android:mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                  "android:mimeType": "*/*",
                 },
               },
             ],
           },
         },
       ];
-      
+
       return newConfig;
     }
   );

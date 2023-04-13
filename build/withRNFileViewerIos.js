@@ -9,7 +9,7 @@ const generateCode_1 = require("@expo/config-plugins/build/utils/generateCode");
 const path_1 = __importDefault(require("path"));
 const fs_extra_1 = __importDefault(require("fs-extra"));
 const resolve_from_1 = __importDefault(require("resolve-from"));
-const debug = require('debug')('file-viewer-plugin');
+const debug = require("debug")("file-viewer-plugin");
 function isReactNativeFileViewerAutolinked(config) {
     // TODO: Detect autolinking
     return true;
@@ -33,7 +33,7 @@ function removeFileViewerCocoaPods(src) {
 }
 exports.removeFileViewerCocoaPods = removeFileViewerCocoaPods;
 function isReactNativeFileViewerInstalled(projectRoot) {
-    const resolved = resolve_from_1.default.silent(projectRoot, 'react-native-file-viewer/package.json');
+    const resolved = resolve_from_1.default.silent(projectRoot, "react-native-file-viewer/package.json");
     return resolved ? path_1.default.dirname(resolved) : null;
 }
 const withFileViewerCocoaPods = (config) => {

@@ -5,11 +5,11 @@ import {
   removeContents,
 } from "@expo/config-plugins/build/utils/generateCode";
 import { ExpoConfig } from "@expo/config-types";
-import path from 'path';
+import path from "path";
 import fs from "fs-extra";
-import resolveFrom from 'resolve-from';
+import resolveFrom from "resolve-from";
 
-const debug = require('debug')('file-viewer-plugin') as typeof console.log;
+const debug = require("debug")("file-viewer-plugin") as typeof console.log;
 
 function isReactNativeFileViewerAutolinked(
   config: Pick<ExpoConfig, "_internal">
@@ -40,9 +40,12 @@ export function removeFileViewerCocoaPods(src: string): MergeResults {
 }
 
 function isReactNativeFileViewerInstalled(projectRoot: string): string | null {
-    const resolved = resolveFrom.silent(projectRoot, 'react-native-file-viewer/package.json');
-    return resolved ? path.dirname(resolved) : null;
-  }
+  const resolved = resolveFrom.silent(
+    projectRoot,
+    "react-native-file-viewer/package.json"
+  );
+  return resolved ? path.dirname(resolved) : null;
+}
 
 const withFileViewerCocoaPods: ConfigPlugin = (config) => {
   return withDangerousMod(config, [
