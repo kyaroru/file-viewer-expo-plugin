@@ -1,0 +1,39 @@
+{
+  "author": "kyaroru",
+  "name": "file-viewer-expo-plugin",
+  "version": "1.0.0",
+  "description": "Config plugin to auto configure react-native-file-viewer on prebuild",
+  "main": "build/withReactNativeFileViewer.js",
+  "types": "build/withReactNativeFileViewer.d.ts",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyaroru/file-viewer-expo-plugin.git"
+  },
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
+  },
+  "files": [
+    "build",
+    "app.plugin.js"
+  ],
+  "peerDependencies": {
+    "expo": "^48.0.9"
+  },
+  "dependencies": {
+    "@expo/config-plugins": "^6.0.1",
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/fs-extra": "^11.0.1",
+    "expo-module-scripts": "^3.0.7"
+  }
+}
