@@ -1,1 +1,1 @@
-module.exports = require("./build/withReactNativeFileViewer");
+module.exports = require("./build/withRNFileViewer");
