@@ -14,7 +14,6 @@ function isReactNativeFileViewerAutolinked(config) {
     // TODO: Detect autolinking
     return true;
 }
-// const fileViewer = '../node_modules/react-native-file-viewer'
 function addFileViewerCocoaPods(src, fileViewerPath) {
     return (0, generateCode_1.mergeContents)({
         tag: "react-native-file-viewer",
