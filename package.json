@@ -3,8 +3,8 @@
   "name": "file-viewer-expo-plugin",
   "version": "1.0.0",
   "description": "Config plugin to auto configure react-native-file-viewer on prebuild",
-  "main": "build/withRNFileViewer.js",
-  "types": "build/withRNFileViewer.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "sideEffects": false,
   "homepage": "https://github.com/kyaroru/file-viewer-expo-plugin#readme",
   "repository": {
@@ -21,8 +21,7 @@
     "expo-module": "expo-module"
   },
   "files": [
-    "build",
-    "app.plugin.js"
+    "build"
   ],
   "dependencies": {
     "@expo/config-plugins": "^6.0.1",
